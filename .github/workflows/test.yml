@@ -13,6 +13,6 @@ jobs:
       - name: Install tools
         run: dotnet tool restore
       - id: foo
-        uses: wekempf/GitVersion.Tool-action@v2
+        uses: wekempf/GitVersion.Tool-action@v3
       - run: echo semver ${{ steps.foo.outputs.semver }}
         shell: bash
