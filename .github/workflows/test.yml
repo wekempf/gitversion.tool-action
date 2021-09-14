@@ -10,8 +10,8 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.301
-      - name: Install dependencies
-        run: dotnet restore
+      - name: Install tools
+        run: dotnet tool restore
       - id: foo
         uses: wekempf/GitVersion.Tool-action@v1
       - run: echo semver ${{ steps.foo.outputs.semver }}
