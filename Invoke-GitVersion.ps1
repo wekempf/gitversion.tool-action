@@ -1,4 +1,6 @@
-$version = dotnet gitversion | ConvertFrom-Json
+$version = dotnet gitversion
+Write-Host $version
+$version = $version | ConvertFrom-Json
 $version.PSObject.Properties | ForEach-Object {
     $name = $_.Name
     $value = $_.Value
