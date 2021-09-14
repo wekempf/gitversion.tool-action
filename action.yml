@@ -3,5 +3,5 @@ description: 'Run GitVersion as a dotnet tool'
 runs:
   using: "composite"
   steps:
-    - run: Invoke-GitVersion.ps1
+    - run: ${{ github.action_path }}/Invoke-GitVersion.ps1
       shell: pwsh
